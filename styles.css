@@ -39,11 +39,6 @@ body {
     min-height: 100vh; 
 }
 
-.hero {
-    position: relative;
-    text-align: center;
-}
-
 .hero img {
     width: 100%;
     max-width: 100%;
@@ -51,20 +46,41 @@ body {
     border-radius: 6px; 
 }
 
-
-h1 {
-    text-align: left;
+h1, p {
     color: white;
 }
 
-img {
-    border-radius: 6px;
+.image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; 
 }
 
-.tomorrows-schedule {
- 
-    overflow-x: auto;
-    white-space: nowrap;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-full {
+    flex-basis: 100%;
+  }
+
+.column-one-third {
+    flex-basis: calc(4 / 10 * 100%);
+}
+
+.column-two-third {
+    flex-basis: calc(7.175 / 10 * 100%);
+}
+
+.now-playing-container {
+    display: flex;
+}
+
+.now-playing-header, .tomorrows-schedule-header {
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .show {
@@ -74,34 +90,93 @@ img {
 }
 
 .tomorrows-schedule {
-
-    overflow-x: auto; 
+    overflow-x: scroll; 
+    flex-direction: column;
     white-space: nowrap; 
     position: relative; 
+    padding-bottom: 30px;
+    padding-top: 20px;
+    scroll-snap-type: x mandatory;
 }
 
 .show {
     display: inline-block; 
     margin-right: 20px; 
+    scroll-snap-align: start;
+    transition: all 0.2s;
 }
-
 
 .tomorrows-schedule::-webkit-scrollbar {
     width: 24px;
-    height: 8px;
+    height: 6px;
 }
-
 
 .tomorrows-schedule::-webkit-scrollbar-track {
     background-color: #000;
 }
-
 
 .tomorrows-schedule::-webkit-scrollbar-thumb {
     background: linear-gradient(0.25turn, #FD5A07, #CF2AEF);
     border-radius: 10px; 
 }
 
-p {
-    color: white;
+.disclaimer {
+    text-align: center;
+    margin: 2rem;
+    margin-top: 4rem;
+}
+
+img, button {
+    cursor: pointer;
+}
+
+@media (min-width: 581px) {
+  .image-two {
+    margin-left: 1rem;
+  }
+
+  .image-three {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-left {
+    margin-left: 0rem;
+  }
+
+  .navbar-right {
+    margin-right: 0rem;
+  }
+}
+
+@media (min-width: 1621px) {
+
+  .navbar-left {
+    margin-left: 5rem;
+  }
+
+  .navbar-right {
+    margin-right: 5rem;
+  }
+  
+}
+
+@media (max-width: 580px) {
+    .now-playing-container {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px; 
+    }
+
+    .now-playing-header, .now-playing, .tomorrows-schedule-header, .tomorrows-schedule {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+      }
+
+    .show {
+        padding-left: 1.5rem;
+    }
 }
