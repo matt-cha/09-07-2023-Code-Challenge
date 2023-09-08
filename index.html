@@ -3,43 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Landing Page</title>
+    <title>GoggleBox</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
-        <!-- Navigation content goes here -->
+        <div class="navbar-left">
+            <img src="/images/2308_gogglebox_logo.png" alt="Logo">
+        </div>
+        <div class="navbar-right">
+            <button id="signin-button">Sign In</button>
+        </div>
     </nav>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <!-- Use <picture> element for responsive hero image -->
-            <picture>
-                <source media="(max-width: 580px)" srcset="mobile-hero.jpg">
-                <img src="desktop-hero.jpg" alt="Hero Image">
-            </picture>
-            <!-- Hero content goes here -->
-        </section>
-
-        <!-- Now Playing Section -->
-        <section class="now-playing">
-            <!-- Use flexbox for layout -->
-            <div class="now-playing-container">
-                <!-- Now playing content goes here -->
-            </div>
-        </section>
-
-        <!-- Tomorrow's Schedule Section -->
-        <section class="tomorrows-schedule">
-            <!-- Dynamically populate content using JavaScript/jQuery -->
-            <!-- Horizontal scrolling UI for TV shows -->
-        </section>
+    <div class="background-container">
+        <div class="main-content">
+            <section class="hero">
+                <picture>
+                    <source media="(max-width: 580px)" srcset="/images/2308_mobile_hero.jpg">
+                    <img src="/images/2308_desktop_hero.jpg" alt="Hero Image">
+                </picture>
+            </section>
+            <section class="now-playing-header">
+                <h1>Now Playing</h1>
+            </section>
+            <section class="now-playing row">
+                <div class="now-playing-container column-full">
+                    <div class="column-one-third">
+                        <div class="image-container">
+                            <img src="/images/2308_01_now_playing.jpg" alt="Only Murders In The Building">
+                        </div>
+                    </div>
+                    <div class="column-two-third">
+                        <div class="image-container image-two">
+                            <img src="/images/2308_02_now_playing.jpg" alt="Yellowjackets">
+                        </div>
+                        <div class="image-container image-three">
+                            <img src="/images/2308_03_now_playing.jpg" alt="Stranger Things 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="tomorrows-schedule-header">
+                <h1>Tomorrow's Schedule</h1>
+            </section>
+            <section class="tomorrows-schedule">
+            </section>
+            <section class="disclaimer">
+                <p>&#169; GoggleBox 2023 All Rights Reserved.</p>
+            </section>  
+        </div>
     </div>
-
-    <script src="jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
