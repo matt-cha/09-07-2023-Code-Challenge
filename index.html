@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Navigation content goes here -->
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Use <picture> element for responsive hero image -->
+            <picture>
+                <source media="(max-width: 580px)" srcset="mobile-hero.jpg">
+                <img src="desktop-hero.jpg" alt="Hero Image">
+            </picture>
+            <!-- Hero content goes here -->
+        </section>
+
+        <!-- Now Playing Section -->
+        <section class="now-playing">
+            <!-- Use flexbox for layout -->
+            <div class="now-playing-container">
+                <!-- Now playing content goes here -->
+            </div>
+        </section>
+
+        <!-- Tomorrow's Schedule Section -->
+        <section class="tomorrows-schedule">
+            <!-- Dynamically populate content using JavaScript/jQuery -->
+            <!-- Horizontal scrolling UI for TV shows -->
+        </section>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Reset default margin and padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #000;
+    color: #fff;
+    /* Add navigation bar styles */
+}
+
+/* Main content container styles */
+.main-content {
+    max-width: 1620px;
+    margin: 0 auto;
+    background-color: #2E083D;
+    /* Add other main content styles */
+}
+
+/* Hero section styles */
+.hero {
+    /* Add styles for the hero section */
+}
+
+/* Now Playing section styles */
+.now-playing {
+    display: flex;
+    /* Add styles for the now playing section */
+}
+
+/* Tomorrow's Schedule section styles */
+.tomorrows-schedule {
+    /* Add styles for the schedule section */
+}
