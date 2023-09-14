@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoggleBox</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-left">
-            <img src="./images/2308_gogglebox_logo.png" alt="Logo">
-        </div>
-        <div class="navbar-right">
-            <button id="signin-button">Sign In</button>
+        <div class="navbar-inner">
+            <div class="navbar-left">
+                <img src="./images/2308_gogglebox_logo.png" alt="Logo">
+            </div>
+            <div class="navbar-right">
+                <button id="signin-button">Sign In</button>
+            </div>
         </div>
     </nav>
     <div class="background-container">
@@ -30,12 +30,12 @@
             </section>
             <section class="now-playing row">
                 <div class="now-playing-container column-full">
-                    <div class="column-one-third">
+                    <div class="column-image-vertical">
                         <div class="image-container">
                             <img src="./images/2308_01_now_playing.jpg" alt="Only Murders In The Building">
                         </div>
                     </div>
-                    <div class="column-two-third">
+                    <div class="column-image-horizontal">
                         <div class="image-container image-two">
                             <img src="./images/2308_02_now_playing.jpg" alt="Yellowjackets">
                         </div>
@@ -56,6 +56,7 @@
             </section>  
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
